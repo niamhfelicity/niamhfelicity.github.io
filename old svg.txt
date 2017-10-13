@@ -13,7 +13,6 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
 	</head>
 	<body class="homepage">
 		<div id="page-wrapper">
@@ -23,6 +22,7 @@
 					<div id="header" class="container">
 
 						<!-- Logo -->
+							<h1><a href="index.html">
                             <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -73,17 +73,63 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <path
-     fill="white"
+     fill="none"
+     stroke="red"
+     stroke-width="3"
      d="m 2370.168,87.835938 c -6.2449,0.202691 -15.0262,2.653231 -26.7266,7.722656 -162.3817,122.338066 -235.7092,330.824416 -385.2539,483.033206 -41.8025,34.02084 -71.1042,57.80165 -123.1484,82.4707 -40.7271,22.04756 -126.2298,72.67547 -137.3379,39.53125 -8.7047,-32.36471 49.3292,-113.96411 65.6057,-164.75792 -0.9214,-47.74835 -13.0962,-34.65244 -79.9573,1.60753 -78.1269,53.98217 -199.1634,216.02132 -157.0605,126.26367 0.7562,-31.82964 113.163,-133.56006 86.1855,-187.87305 -50.5075,-2.43421 -93.8948,37.92125 -135.5976,63.31446 -56.5722,39.90674 -5.2613,-7.75363 -4.375,-36.89258 -72.9114,41.3162 -141.0057,101.25698 -213.5821,145.97266 -75.7271,48.33935 -153.9738,93.6579 -88.9179,-50.13868 33.6615,-43.80028 85.6991,-117.24765 64.3183,-111.91601 -32.2947,20.41485 9.6919,-27.34957 -57.8047,-33.84766 -91.0044,21.01005 -172.9005,99.90559 -259.33982,163.75195 -46.90309,34.04038 -97.39169,70.15513 -138.36914,84.66797 -45.21287,6.5551 -6.7601,-113.00499 21.77734,-162.39843 48.38808,-102.76559 23.47028,-94.83653 0.16211,-60.46094 -83.3007,98.61585 -125.81362,145.84472 -237.84375,210.35351 -144.55908,53.14227 154.75332,-273.02686 13.96094,-231.84179 -34.54581,17.44068 -78.6188,41.84582 -111.1289,73.6914 -11.41474,8.21824 -102.36053,126.05219 -47.56836,25.03125 3.85211,-8.65774 7.89114,-18.27412 14.33593,-31.19531 8.36073,-23.12776 20.38298,-56.774 -9.26953,-43.70117 -28.32876,16.9894 -77.53089,55.35299 -77.92773,69.88281 12.24388,0.0296 14.13642,-6.85214 28.08203,-14.51953 22.18576,-16.62638 58.65216,-52.87671 47.72266,-20.92578 -16.10485,52.94036 -47.88099,90.40317 -82.98243,151.20508 -18.89008,30.99898 -33.66134,71.9493 2.41602,49.51562 88.38008,-95.49472 250.6253,-310.57402 241.61719,-208.11914 -36.38388,108.83174 -70.93761,111.18618 -75.96289,177.04688 -0.81671,41.50252 53.10947,28.50863 56.8457,25.52929 123.43894,-55.18008 255.14049,-254.98961 190.8125,-112.26562 -3.36643,9.76864 -31.74286,75.03336 -7.6875,115.4668 39.13889,20.73902 127.41203,-44.65103 168.01172,-72.58008 15.22478,-10.98284 27.15005,-19.77301 36.56836,-26.89063 8.24025,-4.83865 16.85249,-10.12397 25.52343,-15.7207 -9.24715,23.82715 -19.11927,72.52598 -17,99.72461 3.97742,38.53976 31.92839,32.85139 57.78122,14.97266 28.1019,-21.24438 62.7252,-41.18223 89.7207,-66.08204 58.8554,-59.53937 -42.3046,102.12928 83.6817,64.0625 47.9831,-23.99746 115.8153,-62.74356 165.2304,-105.46875 61.0402,-41.89479 1.7754,33.72712 -14.4355,53.27735 -7.2823,18.72276 -57.0928,65.98167 -17.5,67.52148 15.8474,-25.42419 37.1031,-44.18066 55.2422,-65.85742 47.4125,-54.73977 197.6084,-187.73861 204.125,-136.12305 -19.3287,54.66516 -145.6942,199.11095 -84.2129,216.85547 71.6528,-65.36416 121.0995,-135.54401 201.1133,-192.71094 -23.3575,17.09255 60.5604,-39.53069 38.1679,-1.24609 -30.538,48.7471 -64.7209,97.61968 -66.4915,153.82617 3.8855,44.76032 42.6927,43.14474 70.0733,35.61876 52.3839,-16.59598 167.1324,-95.78301 152.6729,-73.7978 -6.5939,16.93394 -8.5339,38.66253 -5.2097,54.97982 34.3812,37.96084 187.4833,-174.57497 277.7265,-199.50976 4.248,25.22043 -115.1009,190.81875 20.2403,205.71094 60.4978,-12.41924 71.513,3.53613 36.5547,41.92382 -72.2454,79.93991 -239.2456,314.40556 -178.0723,308.22066 119.8277,-57.3639 236.7222,-274.2583 274.9258,-328.65816 15.5621,-16.06416 24.9417,-57.35386 50.6425,-56.32617 75.078,-4.32203 147.7318,-38.55242 213.9708,-75.04883 57.9693,-40.37856 3.655,38.87828 16.2558,69.45118 33.2712,39.4942 68.3929,25.66583 95.1231,1.11718 22.2342,-17.4422 87.8453,-98.68653 87.7773,-69.3125 -8.8677,35.66299 -36.5809,104.6134 5.8457,124.9668 70.9446,13.99613 117.321,-61.93589 164.8496,-102.86719 42.9964,-50.72054 89.2828,-115.011 109.8418,-182.84961 8.5805,-42.3126 -51.0688,-8.78602 -28.1582,16.35938 -5.7702,27.74194 -33.5959,56.53905 -44.9883,87.94531 -54.9631,65.89513 -98.2595,124.87633 -173.9863,160.46094 -46.2279,1.11606 -23.3935,-61.25943 -14.377,-90.18555 14.0923,-57.66292 58.5315,-92.10583 75.4805,-142.18359 20.5838,-49.83239 -39.7186,19.26651 -44.3008,29.9082 -35.36,43.80339 -74.4178,87.9612 -120.6328,119.10742 -21.8082,17.65186 -63.2618,47.40514 -90.039,33.54297 -25.9469,-44.6703 163.8254,-240.33108 108.205,-221.32812 -78.1021,80.18698 -121.801,161.70925 -243.9043,191.11718 19.9009,-9.8594 -99.4757,47.45968 -105.5722,15.39844 101.5625,-62.78811 410.3384,-397.57444 434.375,-523.60351 -4.3464,-47.780576 -57.5581,-9.84195 -82.6992,10.96093 -69.5585,83.16568 -154.4773,180.96755 -228.2813,275.68164 -44.2192,51.47402 -89.4721,109.21037 -136.4199,166.45899 -35.8615,34.30007 -56.9143,87.57052 -107.0938,101.03906 -42.0864,23.13303 -117.4567,23.32594 -121.4433,-40.51562 6.8979,-56.12368 25.4388,-73.94053 53.457,-116.82227 36.4735,-61.13499 -32.0333,-46.32689 -56.1367,-21.57227 -58.7659,34.74934 -100.2024,88.13751 -152.793,130.32618 -35.4581,28.40743 -46.1015,27.16241 -27.7773,-9.85157 66.328,-87.72542 166.0489,-184.45981 211.2617,-229.91992 46.9813,-58.76773 267.5033,-310.864885 201.0801,-308.708982 z m -11.8692,21.226562 c 31.4235,-0.40924 -125.3728,207.3469 -233.584,297.32422 -49.8575,42.14437 118.3165,-192.50866 202,-278.97266 16.2595,-12.64312 26.442,-18.28459 31.584,-18.35156 z m 431.6153,24.4668 c 52.5248,0.56852 -141.7982,260.92361 -376.1621,472.62304 -76.898,36.68959 256.027,-394.8646 345.2597,-460.50781 14.2792,-8.3374 24.4519,-12.18505 30.9024,-12.11523 z M 894.80859,305.32812 c -6.03522,0.0749 -9.61826,6.27764 2.08985,23.54102 20.78932,-10.67008 6.73086,-23.65043 -2.08985,-23.54102 z m 260.22661,182.04297 c 80.712,0.3981 -1.209,114.11267 -93.2598,169.93946 -68.36262,50.77647 -83.79148,50.21848 -84.71485,13.83398 15.20827,-93.55914 48.01245,-128.60914 164.86715,-182.99023 4.7743,-0.54895 9.138,-0.80278 13.1075,-0.78321 z m 1135.6992,239.45118 c 27.9508,-0.008 -88.9517,212.79289 -203.791,286.46093 -62.7084,48.9362 18.7789,-89.92458 169.4843,-259.20508 17.7555,-19.05633 28.821,-27.25427 34.3067,-27.25585 z"
      transform="translate(-0.00219727,0)"
      id="logo"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
 </svg>
+                            </a></h1>
+<script>
+// Get the id of the <path> element and the length of <path>
+var logo = document.getElementById("logo");
+var length = logo.getTotalLength();
+
+// The start position of the drawing
+logo.style.strokeDasharray = length;
+
+// Hide the logo by offsetting dash. Remove this line to show the logo before scroll draw
+logo.style.strokeDashoffset = length;
+
+// Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
+window.addEventListener("scroll", myFunction);
+
+function myFunction() {
+  var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 20;
+
+  var draw = length * scrollpercent;
+
+  // Reverse the drawing (when scrolling upwards)
+  logo.style.strokeDashoffset = length - draw;
+}
+</script>
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li><a href="about.html">About</a></li>
+									<li>
+										<a href="#">Dropdown</a>
+										<ul>
+											<li><a href="#">Lorem ipsum dolor</a></li>
+											<li><a href="#">Magna phasellus</a></li>
+											<li><a href="#">Etiam dolore nisl</a></li>
+											<li>
+												<a href="#">Phasellus consequat</a>
+												<ul>
+													<li><a href="#">Lorem ipsum dolor</a></li>
+													<li><a href="#">Phasellus consequat</a></li>
+													<li><a href="#">Magna phasellus</a></li>
+													<li><a href="#">Etiam dolore nisl</a></li>
+												</ul>
+											</li>
+											<li><a href="#">Veroeros feugiat</a></li>
+										</ul>
+									</li>
+									<li><a href="left-sidebar.html">Left Sidebar</a></li>
+									<li class="break"><a href="right-sidebar.html">Right Sidebar</a></li>
+									<li><a href="no-sidebar.html">No Sidebar</a></li>
 								</ul>
 							</nav>
 
@@ -101,6 +147,89 @@
 						</section>
 
 				</div>
+
+			<!-- Features 1 -->
+				<div class="wrapper">
+					<div class="container">
+						<div class="row">
+							<section class="6u 12u(narrower) feature">
+								<div class="image-wrapper first">
+									<a href="#" class="image featured first"><img src="images/pic01.jpg" alt="" /></a>
+								</div>
+								<header>
+									<h2>Semper magna neque vel<br />
+									adipiscing curabitur</h2>
+								</header>
+								<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur vel
+								sem sit dolor neque semper magna. Lorem ipsum dolor sit amet consectetur et sed
+								adipiscing elit. Curabitur vel sem sit.</p>
+								<ul class="actions">
+									<li><a href="#" class="button">Elevate my awareness</a></li>
+								</ul>
+							</section>
+							<section class="6u 12u(narrower) feature">
+								<div class="image-wrapper">
+									<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+								</div>
+								<header>
+									<h2>Amet lorem ipsum dolor<br />
+									sit consequat magna</h2>
+								</header>
+								<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur vel
+								sem sit dolor neque semper magna. Lorem ipsum dolor sit amet consectetur et sed
+								adipiscing elit. Curabitur vel sem sit.</p>
+								<ul class="actions">
+									<li><a href="#" class="button">Elevate my awareness</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</div>
+
+			<!-- Promo -->
+				<div id="promo-wrapper">
+					<section id="promo">
+						<h2>Neque semper magna et lorem ipsum adipiscing</h2>
+						<a href="#" class="button">Breach the thresholds</a>
+					</section>
+				</div>
+
+			<!-- Features 2 -->
+				<div class="wrapper">
+					<section class="container">
+						<header class="major">
+							<h2>Sed magna consequat lorem curabitur tempus</h2>
+							<p>Elit aliquam vulputate egestas euismod nunc semper vehicula lorem blandit</p>
+						</header>
+						<div class="row features">
+							<section class="4u 12u(narrower) feature">
+								<div class="image-wrapper first">
+									<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+								</div>
+								<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+								vel sem sit dolor neque semper magna lorem ipsum.</p>
+							</section>
+							<section class="4u 12u(narrower) feature">
+								<div class="image-wrapper">
+									<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+								</div>
+								<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+								vel sem sit dolor neque semper magna lorem ipsum.</p>
+							</section>
+							<section class="4u 12u(narrower) feature">
+								<div class="image-wrapper">
+									<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
+								</div>
+								<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur
+								vel sem sit dolor neque semper magna lorem ipsum.</p>
+							</section>
+						</div>
+						<ul class="actions major">
+							<li><a href="#" class="button">Elevate my awareness</a></li>
+						</ul>
+					</section>
+				</div>
+
 			<!-- Footer -->
 				<div id="footer-wrapper">
 					<div id="footer" class="container">
