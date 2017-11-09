@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
         <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
@@ -101,35 +101,41 @@
         
 					<!-- Hero -->
                     <div class="ftb">
-                        <h2> About Me</h2>
-                        <p>
-                            <em>
-                                I am a final year Computer Science student at <a href="http://www.joh.cam.ac.uk/">St John's College, Cambridge</a> from Birmingham, UK, 
-                                and I'll be graduating in July 2018. I interned at <a href="https://careers.google.com/locations/munich/">Google Munich</a> last summer. 
-                                Before that, I interned at <a href="https://careers.google.com/locations/zurich/">Google Zurich</a> in summer 2016, and 
-                                <a href="http://actionstarter.co.uk/">Action Starter Ltd</a> in summer 2015.
-                            </em>
-                        </p>
+                        <h2> Learn to be an Alien</h2>
                         <h6>
-                           CV
+                            The brief
                         </h6>
                         <p>
                             <em>
-                                You can find my latest CV <a href="/cv-niamh-walsh.pdf">here</a>. Alternatively, you can find me on 
-                                <a href="https://www.linkedin.com/in/niamhfw/">LinkedIn</a>.
+                                Procedural landscape generators are often used in videogames, for example to create new unexplored planets. What would a procedural 
+                                creature generator look like? Recent experiments demonstrate that a neural network can learn how to control robot arms, if it has 
+                                enough to explore with. Your task is to create a 3D editor that allows users to define a new kind of alien creature - legs, claws, 
+                                sensors whatever - which then learns how to behave through experimentation with the laws of physics applying to its own body in a 
+                                simple environment (furniture food etc).
                             </em>
                         </p>
                         <h6>
-                           May Ball
+                            The plan
                         </h6>
                         <p>
                             <em>
-                                I spend most of my free time at university organising the biggest event of the year — St John's College May Ball. If you're interested in 
-                                sponsoring us, give me a shout on <a href="mailto:technology@mayball.org">technology@mayball.org</a>.
+                                We were tasked with produced a 3D editor that lets you build an alien creature, which then learns how to interact with its 
+                                environment. To keep our project scope reasonable we decided that the behavior we wanted our aliens to learn was walking. Our plan 
+                                was for a single application with 3 main parts: an editor to build aliens; a way of training aliens to walk; and a simulator to view 
+                                the results. The editor allowed aliens to be created with simple 3D shapes, with control over many of the join properies. To train the 
+                                alien, we used an evolutionary neural network (NEAT: NeuroEvolution of Augmenting Topologies, modifying weights and structures of the
+                                NN using genetic algorithm). First, a generation of aliens exhibit some random behaviour, and we give them a score based on how far 
+                                along the x-axis they walk. The fittest aliens survive and produce offspring, which drives our evolution forwards towards an optimal 
+                                behaviour. To make training as fast as possible, simulated 8 concurrently. Aliens were simulated for 20 real time seconds per generation 
+                                (sped up), and for a fairly sensible alien we could usually get some sort of walking in about 50 generations. The alien simulator would 
+                                display the best generation so far, and simulate it for 20 real seconds.
                             </em>
                         </p>
+                        <h6>
+                            The results
+                        </h6>
                         <div class="center">
-                        <iframe width="482" height="271" src="https://www.youtube.com/embed/mF0X7kENjZ0" frameborder="0" gesture="media" allowfullscreen></iframe>
+                            <iframe src="https://drive.google.com/file/d/0B_pj7H85mbFYakRUdHJEVUMzbWs/preview" width="640" height="360"></iframe>
                         </div>
                     </div>
                 </div>

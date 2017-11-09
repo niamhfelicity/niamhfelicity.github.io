@@ -47,6 +47,32 @@
 	body {
 		-webkit-text-size-adjust: none;
 	}
+    
+    .ftb {
+        border-radius: 10px;
+        border-color: rgba(255, 255, 255, 0.25);
+        background-color: rgba(255,255,255,0.15);
+        width: 75%;
+        margin: auto;
+        padding: 20px 30px;
+    }
+    
+    .ftb h2, h3, h4, h4, h5, h6 {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    
+    .ftb h6 {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    .logo-min {
+        width: 40%;
+        display: block;
+        margin: auto;
+        padding: 20px 0;
+    }
 
 /* Box Model */
 
@@ -2017,10 +2043,16 @@
 		background-repeat: repeat, no-repeat, no-repeat;
 	}
 
-	.homepage #header-wrapper {
+	#header-wrapper {
 		padding: 3em 0 6em 0;
 		background-size: 128px 128px, 100% 100%, auto;
+        height: 100%;
+        width: 100%;
 	}
+    
+    .homepage #header-wrapper {
+        position: fixed;
+    }
 
 	#promo-wrapper {
 		position: relative;
@@ -2040,6 +2072,11 @@
 		background-image: url("images/overlay.png"), url("images/footer.svg");
 		background-size: 128px 128px,				100% 100%;
 	}
+    
+    .center iframe {
+        display: block;
+        margin: 0 auto;
+    }
 
 /* Header */
 
