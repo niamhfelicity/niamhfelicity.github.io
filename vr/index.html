@@ -1,33 +1,115 @@
 <html>
 <head>
-	<title>Panorama</title>
+	<title>Tone Mapping for VR Experiment</title>
 <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
 </head>
 <body>
-<script>
-function start() {
-document.querySelector("#button").setAttribute("hidden",true);
-var i = 0;
+    <script>
+        var VIEW_DURATION  = 5000;
+        var SLEEP_DURATION = 1000;
+        var i = 0;
+        var arr = ["mantiuk08","mantiuk06","mantiuk08","mantiuk06"];
+        var res = new Array(arr.length/2);
+        var sb = document.querySelector('a-sky');
 
-var el = document.getElementById("p"+i);
-//el.removeAttribute("hidden");
-//el.setAttribute("visible", "true");
-el.setAttribute("class", "fullscreen");
-}
+        function start() {
+            document.querySelector("#button").setAttribute("hidden",true);            
+            document.querySelector("#vr").removeAttribute("hidden");
+            document.querySelector('a-scene').enterVR();
+            clearSleep();
+        }
 
-</script>
-<div id="button">
- <button onclick="start()">Begin</button> 
-</div>
-<div id="p0" class="a-hidden">
-	<a-scene>
-		<a-sky src="img/beach/pano-small-mantiuk08.png"></a-sky>
-	</a-scene>
-</div>
-<div id="p1" class="a-hidden">
-	<a-scene>
-		<a-sky src="img/beach/pano-small-mantiuk06.png"></a-sky>
-	</a-scene>
-</div>
+        function clearSleep() {
+            console.log("Showing white screen");
+
+            var sb = document.querySelector('a-sky');
+            sb.setAttribute("src", "");
+
+            window.setTimeout(nextSleep, SLEEP_DURATION);
+        }
+
+        function nextSleep() {
+            // If we reached the end of the array, the experiment is over.
+            if (i == arr.length) {
+                document.querySelector('a-scene').exitVR();
+                console.log("Experiment complete. Results for user " + 
+                            " as follows: ");        
+                console.log(res);
+                endExperiment();
+                return
+            }
+            
+            // Set image src to the next one.
+            console.log("Setting image source to: " + arr[i]);
+            var sb = document.querySelector('a-sky');
+            sb.setAttribute("src", "#" + arr[i]);
+            i++;   
+
+            // If we are about to load an odd image in the array ([2], [4], 
+            // etc), get the keypress for the last pair first.
+            if (i % 2 == 0) {
+                window.setTimeout(registerKeypress, VIEW_DURATION);
+            } else {
+                window.setTimeout(clearSleep, VIEW_DURATION);
+            }
+        }
+        
+        function registerKeypress() {
+            console.log("Waiting for valid keypress...");
+            
+            // Clear the screen to indicate the decision is due.
+            var sb = document.querySelector('a-sky');
+            sb.setAttribute("src", "");
+
+            var r = null;
+            document.onkeydown = function(e) {
+                switch (e.keyCode) {
+                    // 37 is left keydown. Corresponds to first image.
+                    case 37:
+                        r = 0;
+                        break;
+                    // 39 is right keydown. Corresponds to second image.                
+                    case 39:
+                        r = 1;
+                        break;
+                }
+            
+                // Only save a valid keypress.
+                if (r === null) {
+                    registerKeypress();
+                } else {
+                    res[i / 2 - 1] = r;
+                    clearSleep();
+                }
+                
+            };
+        }
+
+        function endExperiment() {
+            document.querySelector("#results").removeAttribute("hidden");
+            document.querySelector("#vr").setAttribute("hidden", "true");
+            document.getElementById("results-p").innerHTML = 
+                "Experiment complete <br> " + res;
+        }
+
+    </script>
+    <div id="button">
+        <button onclick="start()">Begin</button> 
+    </div>
+    <div id="vr" hidden>
+        <a-scene>
+          <a-assets>
+            <!-- Images. -->
+            <img id="mantiuk08" src="img/beach/pano-small-mantiuk08.png">
+            <img id="mantiuk06" src="img/beach/pano-small-mantiuk06.png">
+
+          </a-assets>
+          
+	        <a-sky src=""></a-sky>
+        </a-scene>
+    </div>
+    <div id="results" hidden>
+        <p id="results-p"></p>
+    </div>
 </body>
 </html>
