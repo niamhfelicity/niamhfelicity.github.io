@@ -4,8 +4,30 @@
 <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
 </head>
 <body>
+<script>
+function start() {
+document.querySelector("#button").setAttribute("hidden",true);
+var i = 0;
+
+var el = document.getElementById("p"+i);
+//el.removeAttribute("hidden");
+//el.setAttribute("visible", "true");
+el.setAttribute("class", "fullscreen");
+}
+
+</script>
+<div id="button">
+ <button onclick="start()">Begin</button> 
+</div>
+<div id="p0" class="a-hidden">
 	<a-scene>
-		<a-sky src="img/pano-small.png"></a-sky>
+		<a-sky src="img/beach/pano-small-mantiuk08.png"></a-sky>
 	</a-scene>
+</div>
+<div id="p1" class="a-hidden">
+	<a-scene>
+		<a-sky src="img/beach/pano-small-mantiuk06.png"></a-sky>
+	</a-scene>
+</div>
 </body>
 </html>
