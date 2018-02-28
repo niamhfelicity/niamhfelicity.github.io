@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Tone Mapping for VR Experiment</title>
+    <title>Tone Mapping for VR Experiment</title>
 <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
 </head>
 <body>
@@ -8,7 +8,7 @@
         var VIEW_DURATION  = 5000;
         var SLEEP_DURATION = 1000;
         var i = 0;
-        var arr = ["mantiuk08","mantiuk06","mantiuk08","mantiuk06"];
+        var arr = ['drago03', 'durand02', 'fattal02', 'ferradans11', 'mai11', 'mantiuk06', 'mantiuk08', 'pattanaik00', 'none', 'reinhard02', 'reinhard05','drago03'];
         var res = new Array(arr.length/2);
         var sb = document.querySelector('a-sky');
 
@@ -66,11 +66,11 @@
                 switch (e.keyCode) {
                     // 37 is left keydown. Corresponds to first image.
                     case 37:
-                        r = 0;
+                        r = 1;
                         break;
                     // 39 is right keydown. Corresponds to second image.                
                     case 39:
-                        r = 1;
+                        r = 2;
                         break;
                 }
             
@@ -100,12 +100,20 @@
         <a-scene>
           <a-assets>
             <!-- Images. -->
-            <img id="mantiuk08" src="img/beach/pano-small-mantiuk08.png">
-            <img id="mantiuk06" src="img/beach/pano-small-mantiuk06.png">
-
+             <img id='drago03' src='img/beach/pano-small-drago03.png'>
+             <img id='durand02' src='img/beach/pano-small-durand02.png'>
+             <img id='fattal02' src='img/beach/pano-small-fattal02.png'>
+             <img id='ferradans11' src='img/beach/pano-small-ferradans11.png'>
+             <img id='mai11' src='img/beach/pano-small-mai11.png'>
+             <img id='mantiuk06' src='img/beach/pano-small-mantiuk06.png'>
+             <img id='mantiuk08' src='img/beach/pano-small-mantiuk08.png'>
+             <img id='pattanaik00' src='img/beach/pano-small-pattanaik00.png'>
+             <img id='none' src='img/beach/pano-small-none.png'>
+             <img id='reinhard02' src='img/beach/pano-small-reinhard02.png'>
+             <img id='reinhard05' src='img/beach/pano-small-reinhard05.png'>
           </a-assets>
           
-	        <a-sky src=""></a-sky>
+            <a-sky src=""></a-sky>
         </a-scene>
     </div>
     <div id="results" hidden>
