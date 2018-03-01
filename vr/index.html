@@ -1,9 +1,9 @@
 <html>
 <head>
-    <title>Tone Mapping for VR Experiment</title>
+	<title>Tone Mapping for VR Experiment</title>
 <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
 </head>
-<body>
+<body oncontextmenu="return false;">
     <script>
         var VIEW_DURATION  = 5000;
         var SLEEP_DURATION = 1000;
@@ -24,6 +24,7 @@
 
             var sb = document.querySelector('a-sky');
             sb.setAttribute("src", "");
+            // document.querySelector("#imga").setAttribute("visible",true);              
 
             window.setTimeout(nextSleep, SLEEP_DURATION);
         }
@@ -38,7 +39,7 @@
                 endExperiment();
                 return
             }
-            
+            // document.querySelector("#imga").setAttribute("visible",false);              
             // Set image src to the next one.
             console.log("Setting image source to: " + arr[i]);
             var sb = document.querySelector('a-sky');
@@ -62,14 +63,14 @@
             sb.setAttribute("src", "");
 
             var r = null;
-            document.onkeydown = function(e) {
-                switch (e.keyCode) {
-                    // 37 is left keydown. Corresponds to first image.
-                    case 37:
+            document.onmousedown = function(e) {
+                switch (e.which) {
+                    // 1 is left mouse button. Corresponds to first image.
+                    case 1:
                         r = 1;
                         break;
-                    // 39 is right keydown. Corresponds to second image.                
-                    case 39:
+                    // 3 is right mouse button. Corresponds to second image.                
+                    case 3:
                         r = 2;
                         break;
                 }
@@ -112,8 +113,10 @@
              <img id='reinhard02' src='img/beach/pano-small-reinhard02.png'>
              <img id='reinhard05' src='img/beach/pano-small-reinhard05.png'>
           </a-assets>
-          
             <a-sky src=""></a-sky>
+            <!-- <a-text id="imga" font="kelsonsans" value="Puy de Sancy, France" width="6" position="-1 1.5 -1.5" rotation="0 0 0" scale="" visible="true" text=""></a-text> -->
+            <a-entity id="imga" text="color: black; align: center; value: hello; width: 2;  position="-1 1.5 -1.5" rotation="0 0 0" visible=""></a-entity>
+            <!-- <a-text id="imgb" font="kelsonsans" value="Puy de Sancy, France" width="6" position="-1 1.5 -1.5" rotation="0 0 0" scale="" visible="false" text=""></a-text>           -->
         </a-scene>
     </div>
     <div id="results" hidden>
