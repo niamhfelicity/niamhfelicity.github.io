@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Tone Mapping for VR Experiment</title>
+    <title>Tone Mapping for VR Experiment</title>
 <script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
 </head>
 <body oncontextmenu="return false;">
@@ -8,7 +8,7 @@
         var VIEW_DURATION  = 5000;
         var SLEEP_DURATION = 1000;
         var i = 0;
-        var arr = ['drago03', 'durand02', 'fattal02', 'ferradans11', 'mai11', 'mantiuk06', 'mantiuk08', 'pattanaik00', 'none', 'reinhard02', 'reinhard05','drago03'];
+        var arr = ['reinhard02-beach', 'mantiuk08-beach', 'durand02-graffiti', 'reinhard02-graffiti', 'fattal02-rathaus', 'mantiuk08-rathaus', 'fattal02-street', 'durand02-street', 'reinhard02-rathaus', 'mantiuk08-rathaus', 'durand02-beach', 'fattal02-beach', 'fattal02-rathaus', 'mantiuk08-rathaus', 'reinhard02-street', 'mantiuk08-street', 'durand02-rathaus', 'reinhard02-rathaus', 'mantiuk08-beach', 'durand02-beach', 'fattal02-street', 'durand02-street', 'durand02-graffiti', 'mantiuk08-graffiti', 'mantiuk08-street', 'fattal02-street', 'durand02-beach', 'mantiuk08-beach', 'fattal02-graffiti', 'durand02-graffiti', 'mantiuk08-beach', 'fattal02-beach', 'reinhard02-street', 'durand02-street', 'mantiuk08-street', 'reinhard02-street', 'fattal02-beach', 'reinhard02-beach', 'mantiuk08-rathaus', 'fattal02-rathaus', 'fattal02-street', 'mantiuk08-street', 'durand02-rathaus', 'fattal02-rathaus', 'durand02-rathaus', 'mantiuk08-rathaus', 'mantiuk08-beach', 'fattal02-beach', 'fattal02-street', 'reinhard02-street', 'reinhard02-graffiti', 'durand02-graffiti', 'mantiuk08-beach', 'fattal02-beach', 'reinhard02-rathaus', 'fattal02-rathaus', 'reinhard02-street', 'fattal02-street', 'fattal02-graffiti', 'mantiuk08-graffiti', 'durand02-rathaus', 'mantiuk08-rathaus', 'mantiuk08-graffiti', 'durand02-graffiti', 'mantiuk08-street', 'fattal02-street', 'reinhard02-rathaus', 'durand02-rathaus', 'mantiuk08-graffiti', 'reinhard02-graffiti', 'reinhard02-graffiti', 'durand02-graffiti', 'mantiuk08-beach', 'durand02-beach', 'reinhard02-graffiti', 'fattal02-graffiti', 'reinhard02-street', 'mantiuk08-street', 'durand02-rathaus', 'fattal02-rathaus', 'reinhard02-beach', 'fattal02-beach', 'reinhard02-rathaus', 'fattal02-rathaus', 'reinhard02-graffiti', 'fattal02-graffiti', 'reinhard02-street', 'durand02-street', 'fattal02-beach', 'durand02-beach', 'fattal02-beach', 'reinhard02-beach', 'fattal02-graffiti', 'reinhard02-graffiti', 'fattal02-graffiti', 'durand02-graffiti', 'durand02-street', 'mantiuk08-street', 'reinhard02-beach', 'durand02-beach', 'reinhard02-rathaus', 'fattal02-rathaus', 'reinhard02-rathaus', 'mantiuk08-rathaus', 'durand02-beach', 'reinhard02-beach', 'fattal02-graffiti', 'mantiuk08-graffiti', 'mantiuk08-graffiti', 'reinhard02-graffiti', 'mantiuk08-graffiti', 'fattal02-graffiti', 'mantiuk08-street', 'durand02-street', 'durand02-beach', 'fattal02-beach', 'mantiuk08-beach', 'reinhard02-beach', 'reinhard02-street', 'fattal02-street', 'durand02-graffiti', 'mantiuk08-graffiti', 'fattal02-graffiti', 'durand02-graffiti', 'mantiuk08-graffiti', 'reinhard02-graffiti', 'mantiuk08-street', 'durand02-street', 'reinhard02-street', 'durand02-street', 'durand02-rathaus', 'mantiuk08-rathaus', 'durand02-beach', 'reinhard02-beach', 'mantiuk08-beach', 'reinhard02-beach', 'fattal02-rathaus', 'durand02-rathaus', 'reinhard02-rathaus', 'durand02-rathaus', 'reinhard02-rathaus', 'mantiuk08-rathaus', 'fattal02-street', 'durand02-street'];
         var res = new Array(arr.length/2);
         var sb = document.querySelector('a-sky');
 
@@ -101,17 +101,22 @@
         <a-scene>
           <a-assets>
             <!-- Images. -->
-             <img id='drago03' src='img/beach/pano-small-drago03.png'>
-             <img id='durand02' src='img/beach/pano-small-durand02.png'>
-             <img id='fattal02' src='img/beach/pano-small-fattal02.png'>
-             <img id='ferradans11' src='img/beach/pano-small-ferradans11.png'>
-             <img id='mai11' src='img/beach/pano-small-mai11.png'>
-             <img id='mantiuk06' src='img/beach/pano-small-mantiuk06.png'>
-             <img id='mantiuk08' src='img/beach/pano-small-mantiuk08.png'>
-             <img id='pattanaik00' src='img/beach/pano-small-pattanaik00.png'>
-             <img id='none' src='img/beach/pano-small-none.png'>
-             <img id='reinhard02' src='img/beach/pano-small-reinhard02.png'>
-             <img id='reinhard05' src='img/beach/pano-small-reinhard05.png'>
+             <img id='durand02-beach' src='img/beach/pano-small-durand02.png'>
+             <img id='fattal02-beach' src='img/beach/pano-small-fattal02.png'>
+             <img id='mantiuk08-beach' src='img/beach/pano-small-mantiuk08.png'>
+             <img id='reinhard02-beach' src='img/beach/pano-small-reinhard02.png'>
+             <img id='durand02-street' src='img/street/pano-small-durand02.png'>
+             <img id='fattal02-street' src='img/street/pano-small-fattal02.png'>
+             <img id='mantiuk08-street' src='img/street/pano-small-mantiuk08.png'>
+             <img id='reinhard02-street' src='img/street/pano-small-reinhard02.png'>
+             <img id='durand02-graffiti' src='img/graffiti/pano-small-durand02.png'>
+             <img id='fattal02-graffiti' src='img/graffiti/pano-small-fattal02.png'>
+             <img id='mantiuk08-graffiti' src='img/graffiti/pano-small-mantiuk08.png'>
+             <img id='reinhard02-graffiti' src='img/graffiti/pano-small-reinhard02.png'>
+             <img id='durand02-rathaus' src='img/rathaus/pano-small-durand02.png'>
+             <img id='fattal02-rathaus' src='img/rathaus/pano-small-fattal02.png'>
+             <img id='mantiuk08-rathaus' src='img/rathaus/pano-small-mantiuk08.png'>
+             <img id='reinhard02-rathaus' src='img/rathaus/pano-small-reinhard02.png'>
           </a-assets>
             <a-sky src=""></a-sky>
             <!-- <a-text id="imga" font="kelsonsans" value="Puy de Sancy, France" width="6" position="-1 1.5 -1.5" rotation="0 0 0" scale="" visible="true" text=""></a-text> -->
