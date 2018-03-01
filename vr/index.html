@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Tone Mapping for VR Experiment</title>
-<script src="https://aframe.io/releases/0.4.0/aframe.min.js"></script>
+<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
 </head>
 <body oncontextmenu="return false;">
     <script>
@@ -24,12 +24,13 @@
 
             var sb = document.querySelector('a-sky');
             sb.setAttribute("src", "");
-            // document.querySelector("#imga").setAttribute("visible",true);              
+            document.querySelector("a-text").setAttribute("value", i % 2 ? "Image B" : "Image A");              
 
             window.setTimeout(nextSleep, SLEEP_DURATION);
         }
 
         function nextSleep() {
+            document.querySelector("a-text").setAttribute("value","");
             // If we reached the end of the array, the experiment is over.
             if (i == arr.length) {
                 document.querySelector('a-scene').exitVR();
@@ -61,7 +62,7 @@
             // Clear the screen to indicate the decision is due.
             var sb = document.querySelector('a-sky');
             sb.setAttribute("src", "");
-
+            document.querySelector("a-text").setAttribute("value", "Please select. \n\nComparison " + i/2 + " of 72.");             
             var r = null;
             document.onmousedown = function(e) {
                 switch (e.which) {
@@ -119,11 +120,7 @@
              <img id='reinhard02-rathaus' src='img/rathaus/pano-small-reinhard02.png'>
           </a-assets>
             <a-sky src=""></a-sky>
-            <a-text font="kelsonsans" value="Puy de Sancy, France" width="6" position="0 2 -2" scale="2 2 2" text="width:10;value:Image A;color:#0f0f0f;align:center"></a-text>
-            <!-- <a-text font="kelsonsans" value="Puy de Sancy, France" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0" text="value:Image A;color:#0d0c0c"></a-text>             -->
-            <!-- <a-text id="imga" font="kelsonsans" value="Puy de Sancy, France" width="6" position="-1 1.5 -1.5" rotation="0 0 0" scale="" visible="true" text=""></a-text> -->
-            <!-- <a-entity id="imga" text="color: black; align: center; value: hello; width: 2;  position="-1 1.5 -1.5" rotation="0 0 0" visible=""></a-entity> -->
-            <!-- <a-text id="imgb" font="kelsonsans" value="Puy de Sancy, France" width="6" position="-1 1.5 -1.5" rotation="0 0 0" scale="" visible="false" text=""></a-text>           -->
+            <a-text font="kelsonsans" value="Image A" width="6" position="0 2 -2" scale="1.5 1.5 1.5" text="width:10;color:#0f0f0f;align:center"></a-text>
         </a-scene>
     </div>
     <div id="results" hidden>
